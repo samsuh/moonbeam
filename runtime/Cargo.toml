@@ -70,7 +70,6 @@ std = [
 	"sp-std/std",
 	"sp-transaction-pool/std",
 	"sp-version/std",
-	"moonbeam-primitives/std",
 	"sudo/std",
 	"system/std",
 	"timestamp/std",
@@ -80,4 +79,5 @@ std = [
 	"frame-system-rpc-runtime-api/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"frontier-rpc-primitives/std",
+	"moonbeam-primitives/std",
 ]

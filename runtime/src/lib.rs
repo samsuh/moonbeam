@@ -60,8 +60,10 @@ pub type Signature = MultiSignature;
 
 /// Some way of identifying an account on the chain. We intentionally make it equivalent
 /// to the public key of our transaction signing scheme.
-pub type AccountId = moonbeam_primitives::AccountId32;
+//pub type AccountId = moonbeam_primitives::AccountId32;
+pub type AccountId = <<Signature as Verify>::Signer as IdentifyAccount>::AccountId;
 
+pub type NotUsedType =  moonbeam_primitives::AccountId32;
 /// The type for looking up accounts. We don't expect more than 4 billion of them, but you
 /// never know...
 pub type AccountIndex = u32;
