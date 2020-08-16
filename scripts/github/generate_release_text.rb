@@ -36,12 +36,10 @@ prev_cargo = TOML::Parser.new(pg.show("#{last_version}:Cargo.lock")).parsed
 current_cargo = TOML::Parser.new(pg.show("#{version}:Cargo.lock")).parsed
 
 substrate_prev_sha = prev_cargo['package']
-                    .find { |p| p['name'] == 'sc-cli' }['source']
-                    .split('#').last
+                    .find { |p| p['name'] == 'sp-runtime' }['version']
 
 substrate_cur_sha = current_cargo['package']
-                    .find { |p| p['name'] == 'sc-cli' }['source']
-                    .split('#').last
+                    .find { |p| p['name'] == 'sp-runtime' }['version']
 
 substrate_cl = Changelog.new(
   'paritytech/substrate', substrate_prev_sha, substrate_cur_sha,
