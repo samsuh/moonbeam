@@ -66,10 +66,4 @@ moonbeam_runtime = get_runtime('moonbeam', moonbeam_path)
 # These json files should have been downloaded as part of the build-runtimes
 # github action
 
-moonbeam_json = JSON.parse(
-  File.read(
-    ENV['GITHUB_WORKSPACE'] + '/moonbeam-srtool-json/srtool_output.json'
-  )
-)
-
 puts renderer.result
