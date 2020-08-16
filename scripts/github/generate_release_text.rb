@@ -35,10 +35,10 @@ moonbeam_cl = Changelog.new(
 prev_cargo = TOML::Parser.new(pg.show("#{last_version}:Cargo.lock")).parsed
 current_cargo = TOML::Parser.new(pg.show("#{version}:Cargo.lock")).parsed
 
-substrate_prev_sha = prev_cargo['package']
+substrate_prev_sha = "v" + prev_cargo['package']
                     .find { |p| p['name'] == 'sp-runtime' }['version']
 
-substrate_cur_sha = current_cargo['package']
+substrate_cur_sha = "v" + current_cargo['package']
                     .find { |p| p['name'] == 'sp-runtime' }['version']
 
 substrate_cl = Changelog.new(
