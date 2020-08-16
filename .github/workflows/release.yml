@@ -132,6 +132,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.publish-draft-release.outputs.asset_upload_url }}
-          asset_path: ./${{ matrix.runtime }}
+          asset_path: ./node-${{ matrix.runtime }}
           asset_name: ${{ matrix.runtime }}
           asset_content_type: application/octet-stream
