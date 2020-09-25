@@ -84,5 +84,5 @@ This github repository is also linked to Gitlab CI
 
 ### Code style
 
-Moonbeam is following the [substrate code style](https://openethereum.github.io/wiki/Substrate-Style-Guide)  
+Moonbeam is following the [substrate code style](https://github.com/substrate-developer-hub/substrate-developer-hub.github.io/blob/source/CONTRIBUTING.md)  
 We provide a [.editorconfig](.editorconfig) (*compatible with VSCode using RLS*)
